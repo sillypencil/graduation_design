@@ -1,0 +1,30 @@
+doctype html
+html(lang="zh-cn")
+  head
+    meta(charset="utf-8")
+    title Login
+    link(rel="stylesheet", type="text/css", href="/stylesheets/Login.css")
+    script(src="/jQuery/jquery-1.12.3.min.js")
+  body
+    #Login_box
+      #header_box
+        #header_left
+          .logo_min
+          p 软件工程教学服务系统
+        #header_right
+          p 还没有帐号？
+          a(href="/register") 注册
+      #logo
+      p.welcome 您的敏捷项目协作工具
+      .separate
+      p.intro1 实时同步团队工作以实现高效协同，团队工作体现为卡片，内容可以是需求、任务、问题等。
+      p.intro2 让团队及时关注剩余时间及剩余工作，随时掌控团队工作进展。
+      form(method="post",action="/login")
+        #account_box
+          input(type="text",placeholder="账号" name="email")
+        #password_box
+          input(type="password",placeholder="密码" name="password")
+        input#submit.submit1(type="submit",value="")
+    
+    //script(type='text/javascript', src='/javascripts/public.js')
+    script(type='text/javascript',src='/javascripts/Login.js')

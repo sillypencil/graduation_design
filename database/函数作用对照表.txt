@@ -1,0 +1,103 @@
+user.js
+selectPassword   登录密码验证(传入email，读取password)
+insertUser       添加用户信息（插入email，password，phone，name，sex，snumber，identity）
+updateUser       修改用户信息（传入obj，更新password，phone，name，sex，snumber，identity）
+需要补充：
+selectUser	 查询用户个人信息（传入email，读取email，phone，name，sex，snumber，identity）
+selectOtheruser	 查询其他用户用户个人信息（传入email，读取email，name，sex，identity）
+selectUsername   查询用户名（传入email，读取name）//待定
+
+
+project.js
+deletePro        删除项目（传入pnumber，删除整行）
+selectPro        通过项目编号获取项目所有信息（传入pnumber，查询*）
+需要修改：
+insertPro        新增项目(传入obj，插入name，intro，cycle，days，pnumber，finish，startdate）PS：去掉content
+selectPnum       根据项目编号获取项目名（传入pnumber，查询name）PS：需要返回pnumber
+selectKwd        根据项目名的关键字获取项目名（传入Kwd，查询name）PS：需要返回pnumber
+updatePro        修改项目信息（传入obj，通过obj.pnumber，更新name，intro，cycle，days，finish，startdate）去掉content
+需要补充：
+
+task.js
+deleteTask       删除任务（传入tnumber，删除整行）
+selectAtask      根据任务编号获取任务的全部信息（传入tnumber，查询*）
+需要修改：
+insertTask       新增任务（传入obj，插入tnumber， name，content，days（需要的天数），personnum，finish，startdate，pnumber）PS:finish改成stage
+updateTask       修改任务信息（传入tnumber，更新name，content，days，personnum，finish，startdate，pnumber）PS:finish改成stage
+selectTnum       根据所属项目编号获取任务名称（传入pnumber，查询name）改成：传入pnumber，查询name，content，stage，startdate）
+
+user-project.js
+需要补充：
+insertRup       插入新数据，传入email，pnumber
+selectProByUser 通过用户查询所参与的项目(传入email，读取pnumber)
+selectUserByPro 通过项目查询参与者(传入pnumber，读取email）
+
+comment.js（table comment： id，content，date，tnumber，evaluator（评论人，这里使用email））
+需要补充：
+insertComment   新增评论（传入obj，插入content，date，tnumber，evaluator）
+selectComment   查询评论（传入tnumber，查询content，date，tnumber，evaluator）
+deleteComenet   删除评论（传入tnumber，email，验证本人评论之后，删除整行）
+
+
+user-user.js（table user-user id，user1，user2，isfrined）
+需要补充：
+insertFriend   添加好友（传入user1，user2， 插入2条*）
+deletFriend    拉黑好友（传入user1，user2， 删除2条*）
+selectFriend   查询好友（传入user1，查询user2，在user表里查询user2的个人信息）
+
+friending.js（table friending id，applyer，receiver，result，sendtime，dealtime）
+需要补充：
+selectApply    查询申请（传入receiver，查询所有发给他的申请*，要筛选，去重）
+insertApply    添加申请（传入obj，则插入applyer，receiver，result（null），sendtime，dealtime（null））
+updateApply    更新申请（传入obj，查receiver=receiver，applyer=applyer，result=null的所有数据，更新result，dealtime）
+
+message.js（table message id，sender， receiver，content，time）
+需要补充：
+insertMsg      添加消息（传入obj，插入id，sender， receiver，content，time，isread）
+selectMsg      读取消息（传入两人，读取conten，time）
+updataMsg      区分已读未读（传入receiver，sender，更新isread）
+
+
+2016.5.5 需求更新
+根据项目查询项目的所有评论（缺项目-评论表）
+根据用户查询跟用户相关的所有评论
+
+查询好友相关信息（连表查询)  已完成  
+
+
+
+
+
+table task_comment（id, content, date, tnumber, evaluator）
+
+
+table project_comment(id, pnumber, evaluator, date, content)
+
+message
+
+project.js：
+selectAllProject 查询所有项目
+
+
+
+
+
+2016.5.13补充
+查询项目评论 selectpComment（传入pnumber，查询所有）
+插入项目评论 insertpComment（传入obj，生成新评论）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

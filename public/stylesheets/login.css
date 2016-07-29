@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+*{
+	margin:0px;
+	padding:0px;
+	font-family:"微软雅黑";
+}
+#Login_box{
+	width:1024px;
+	height:768px;
+	margin:0 auto;
+	background:url("../images/4.24/bkg.jpg") center no-repeat;
+	color:#fff;
+	/*border?????*/
+	border:1px solid #fff;
+}
+#header_box{
+	height:30px;
+	margin: 35px 65px 0 50px;
+	/*border:1px solid #fff;*/
+}
+#header_left{
+	float:left;
+	font-size:18px;
+	/*border:1px solid blue;*/
+}
+#header_left .logo_min{
+	float:left;
+	width:30px;
+	height:30px;
+	background:url("../images/4.24/l1.png") center no-repeat;
+}
+#header_left p{
+	float:left;
+	margin-left: 15px;
+	height:30px;
+	line-height:30px;
+	/*border:1px solid red;*/
+}
+#header_right{
+	float:right;
+	font-size:14px;
+	height:30px;
+	line-height:30px;
+	/*border:1px solid blue;*/
+} 
+#header_right p{
+	float:left;
+	/*border:1px solid blue;*/
+}
+#header_right a{
+	float:left;
+	color:#fff;
+	/*border:1px solid blue;*/
+}
+#logo{
+	width:100px;
+	height:100px;
+	margin: 0 auto;
+	margin-top:80px;
+	background: url("../images/4.24/l2.png") center no-repeat;
+	/*border:1px solid blue;*/
+}
+p.welcome{
+	width:300px;
+	text-align:center;
+	margin: 0 auto;
+	margin-top:24px;
+	font-size:30px;
+	/*border:1px solid blue;*/
+}
+.separate{
+	width:300px;
+	height:2px;
+	background:#fff;
+	margin:0 auto;
+}
+.intro1{
+	font-size:14px;
+	width:600px;
+	text-align:center;
+	margin:0 auto;
+	margin-top: 10px;
+	/*border:1px solid blue;*/
+}
+.intro2{
+	font-size:14px;
+	width:600px;
+	text-align:center;
+	margin:0 auto;
+	/*border:1px solid blue;*/
+}
+#account_box{
+	width:300px;
+	height:40px;
+	margin:0 auto;
+	margin-top: 45px;
+	background:#fff;
+}
+#account_box input{
+	padding-left: 17px;
+	width:283px;
+	height:40px;
+	border:none;
+}
+#password_box{
+	width:300px;
+	height:40px;
+	margin:0 auto;
+	margin-top: 25px;
+	background:#fff;	
+}
+#password_box input{
+	padding-left: 17px;
+	width:283px;
+	height:40px;
+	border:none;
+}
+.submit1{
+	display:block;
+	margin:0 auto;
+	margin-top: 35px;
+	width:100px;
+	height:40px;
+	background:url("../images/4.24/denglu1.png") center no-repeat;
+	border:none;
+}
+.submit2{
+	display:block;
+	margin:0 auto;
+	margin-top: 35px;
+	width:100px;
+	height:40px;
+	background:url("../images/4.24/denglu2.png") center no-repeat;
+	border:none;
+}

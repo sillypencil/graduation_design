@@ -1,0 +1,126 @@
+doctype html
+html(lang='zh-cn')
+  head
+      meta(charset='utf-8')
+      title Project
+      link(rel='stylesheet', type='text/css', href='/stylesheets/public.css')
+      link(rel='stylesheet', type='text/css', href='/stylesheets/Project.css')
+      //script(src="https://code.jquery.com/jquery-1.12.0.min.js")
+      script(src="/jQuery/jquery-1.12.3.min.js")
+  body
+    //网页头部
+    include includes/header
+    
+    //页面主体
+    div#project_list_mainbody
+      
+      //侧边导航
+      div#sidenav
+        a.sidenav_title(href="###" target="") 我的项目
+        a(href="###" target="") 进行中的项目
+        a(href="###" target="") 已完成的项目
+        a.sidenav_title(href="###" target="") 全部项目
+        a(href="###" target="") 进行中的项目
+        a(href="###" target="") 已完成的项目
+        a(href="###" target="") 最近浏览的项目
+      
+
+      //项目
+      #project_border
+        //项目头部
+        p#project_header 项目列表
+
+        //项目新建icon
+        #project_createicon_border
+          div
+          #project_createicon
+
+        //项目新建框
+        #project_create_border
+          p 新建项目
+          .prj_name 项目名称 :<input type="text" name="name">
+          .prj_introduce 
+            p 项目简介 :
+            input(type="textarea" name="intro") 
+          .prj_sprint 周期数目 :<input id="spr_num" name="allcycles" type="text">周期时长 :<input id="spr_time" name="sprtime" type="text"><select id="spr_timetype" name="hour"><option value ="hour">时</option><option name="day" value ="day">天</option><option name="week" value="week">周</option><option value="month">月</option></select>
+          .prj_environment 开发环境 :<input type="text" name="environment">
+          .prj_ispublic 是否公开 : 是<input class="pub" type="radio" name="pub" value="yes">否<input class="pri" type="radio" name="pub" value="no"><input class="crebtn" type="button" value="创建项目">
+        //项目列表
+        #project_list_border
+          //项目1
+          if(projects && projects.length > 0)
+            each project in projects
+              .project(data-pnumber="#{project.pnumber}")
+                .project_information
+                  .project_title_sprint
+                    p.title #{project.name}
+                    p.sprinttime #{project.starttime} - #{project.endtime}
+                  p.project_introduce #{project.intro}
+                  .time_commentCount
+                    p.time #{project.updatetime}
+                    p.commenticon
+                    p.message #{project.msgcount}
+                  .project_sprint_toScrum_commenticon
+                    p.sprint 当前第<span>#{project.curcycle}</span>周期 第<span>#{project.curday}</span>天 
+                    p.toScrum 
+                      a(href="#{project.url}") 查看任务展板 
+                    .pre_ommenticon_border
+                      div
+                      p 评论
+                  .project_gruop
+                    .photo
+                    .photo
+                    .photo.currentuser
+                    .photo
+                .project_comment_border
+                  .project_comment_box_btn_border
+                    .project_commentbox
+                      input(type="text",placeholder="请输入您的评论")
+                    input.project_commentbtn(type="button")
+                  .project_comment_list
+                    //评论1
+                    if(project.comments && project.comments.length > 0)
+                      each comment in project.comments 
+                        .project_comment
+                          .comment_top
+                            p.comment_photo
+                            p.comment_name #{comment.commenter}
+                            p.from_prj #{comment.project}
+                          .comment_content #{comment.content}
+                          .conment_bottom
+                            p.comment_time #{comment.time}
+                            p.replyicon
+                            p.reply 回复
+
+      //项目联系人 
+      div#project_contacts
+        //项目联系人_搜索框
+        div#project_contacts_search
+          input#project_contacts_search_icon(type="submit" value="")
+          input#project_contacts_search_box(type="text" placeholder="请输入搜索的内容")
+        //项目联系人_列表
+        div#project_contacts_list
+          div#project_contacts_list_title 我的项目伙伴
+          div.project_contacts_list_con
+            img(src="/images/4-10/组员头像X.png" alt="组员头像")
+            p 丁力<br/><span>软件工程教学服务系统</span>
+          div.project_contacts_list_con
+            img(src="/images/4-10/组员头像X.png" alt="组员头像")
+            p 丁力<br/><span>软件工程教学服务系统</span>
+
+
+    //- //头部搜索框
+    include includes/header2
+    
+
+    // 右侧项目成员&好友列表_图标
+    include includes/contactlist
+    
+
+    //尾部
+    div#footer
+
+
+    //div#mn.test  divdiv
+    script(type='text/javascript', src='/javascripts/public.js')
+    script(type='text/javascript', src='/javascripts/Project1.js')

@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+#Register_box{
+	width:1024px;
+	height:768px;
+	margin:0 auto;
+	background:url("../images/4.24/bkg.jpg") center no-repeat;
+	color:#fff;
+	/*border?????*/
+	border:1px solid #fff;
+}
+#header_box{
+	height:30px;
+	margin: 35px 65px 0 50px;
+	/*border:1px solid #fff;*/
+}
+#header_left{
+	float:left;
+	font-size:18px;
+	/*border:1px solid blue;*/
+}
+#header_left .logo_min{
+	float:left;
+	width:30px;
+	height:30px;
+	background:url("../images/4.24/l1.png") center no-repeat;
+}
+#header_left p{
+	float:left;
+	margin-left: 15px;
+	height:30px;
+	line-height:30px;
+	/*border:1px solid red;*/
+}
+#header_right{
+	float:right;
+	font-size:14px;
+	height:30px;
+	line-height:30px;
+	/*border:1px solid blue;*/
+} 
+#header_right p{
+	float:left;
+	/*border:1px solid blue;*/
+}
+#header_right a{
+	float:left;
+	color:#fff;
+	/*border:1px solid blue;*/
+}
+p.welcome{
+	width:600px;
+	text-align:center;
+	margin: 0 auto;
+	margin-top:75px;
+	font-size:30px;
+	/*border:1px solid blue;*/
+}
+.separate{
+	width:300px;
+	height:2px;
+	background:#fff;
+	margin:0 auto;
+	margin-top: 32px;
+}
+p.tip{
+	width:300px;
+	text-align:center;
+	margin:0 auto;
+	margin-top: 16px;
+
+}
+.input_box{
+	width:300px;
+	height:40px;
+	margin:0 auto;
+	margin-top: 20px;
+}
+#account_box{
+	margin-top: 35px;
+}
+.input_box input.single{
+	padding-left: 17px;
+	width:283px;
+	height:40px;
+	border:none;
+}
+#name{
+	float:left;
+	width:83px;
+}
+.sexradio{
+	float:left;
+	height:40px;
+	line-height: 40px;
+	margin-left: 25px;
+	margin-right: 15px;
+}
+.radio_item{
+	float:left;
+	height:40px;
+	line-height: 40px;
+	/*border:1px solid blue;*/
+}
+.radio_item_m{
+	float:left;
+	height:40px;
+	line-height: 40px;
+	margin-right: 25px;
+	/*border:1px solid blue;*/
+}
+#phone{
+	width:183px;
+	border:none;
+}
+#phone_type select{
+	height: 40px;
+	width:75px;
+	padding-left: 15px;
+	margin-left: 20px;
+	border:none;
+}
+
+
+
+.submit1{
+	display:block;
+	margin:0 auto;
+	margin-top: 35px;
+	width:100px;
+	height:40px;
+	background:url("../images/4.24/zhuce1.png") center no-repeat;
+	border:none;
+}
+.submit2{
+	display:block;
+	margin:0 auto;
+	margin-top: 35px;
+	width:100px;
+	height:40px;
+	background:url("../images/4.24/zhuce2.png") center no-repeat;
+	border:none;
+}

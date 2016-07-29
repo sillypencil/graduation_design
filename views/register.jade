@@ -1,0 +1,43 @@
+doctype html
+html(lang="zh-cn")
+  head
+    meta(charset="utf-8")
+    title Register
+    link(rel='stylesheet', type='text/css', href='/stylesheets/public.css')
+    link(rel="stylesheet", type="text/css", href="/stylesheets/Register.css")
+    script(src="/jQuery/jquery-1.12.3.min.js")
+  body
+    #Register_box
+      #header_box
+        #header_left
+          .logo_min
+          p 软件工程教学服务系统
+        #header_right
+          p 已有帐号？
+          a(href="/login") 登录
+      p.welcome 欢迎使用软件工程教学服务系统
+      .separate
+      p.tip 请使用邮箱进行注册，手机号可以为空。
+      #account_box.input_box
+        input.single(type="text",placeholder="账号" name="email")
+      .input_box
+        input.single(type="text",placeholder="密码" name="password")
+      .input_box
+        input.single(type="text",placeholder="确认密码")
+      #name_sex.input_box
+        input#name.single(type="text",placeholder="姓名" name="name")
+        input.sexradio(type="radio",name="sex",value="man")
+        p.radio_item_m 男
+        input.sexradio(type="radio",name="sex",value="woman")
+        p.radio_item 女
+      #phone_type.input_box
+        input.single#phone(type="text",placeholder="手机" name="phone")
+        select.single(value=" ",placeholder="身份" name="identity") 
+          option(value="student") 学生
+          option(value="teacher") 教师
+      input#submit.submit1(type="submit",value="")
+        
+      
+
+    //script(type='text/javascript', src='/javascripts/public.js')
+    script(type='text/javascript',src='/javascripts/Register.js')

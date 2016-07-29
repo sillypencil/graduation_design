@@ -1,0 +1,144 @@
+doctype html
+html(lang='zh-cn')
+  head
+      meta(charset='utf-8')
+      title Homepage
+      link(rel='stylesheet', type='text/css', href='/stylesheets/public.css')
+      link(rel='stylesheet', type='text/css', href='/stylesheets/Homepage.css')
+      script(src="/jQuery/jquery-1.12.3.min.js")
+  body
+    //网页头部
+    include includes/header
+
+    //tab栏背景
+    div#bac
+      div#profile
+        div#photo
+        p #{username}<br/><span>#{user.job}</span>
+      div#btnborder
+        div#btn1.btn_active
+          p.num_active #{active_num}
+          p 我的动态
+        #btn2.btn 
+          p.num #{project_num}
+          p 我的项目
+        #btn3.btn 
+          p.num #{task_num}
+          p 我的任务
+        #btn4.btn 
+          p.num #{article_num}
+          p 我的文章
+    //主体
+    #mainbody
+      //侧边栏
+      #aside_border
+        #aside
+          .top
+            p.toptitle 个人档案
+            p.topcontent 姓名：#{username}<br/>性别：#{user.sex}<br/>专业：#{user.major}<br/>邮箱：#{user.email}
+          .bottom
+            P.bottomtitle 最近来访
+            #visitors
+              .visitors_photo
+              .visitors_photo
+              .visitors_photo
+              .visitors_photo
+      //动态
+      #moment_border
+        if(moments.length > 0)
+          for moment in moments
+            .moment
+              .moment_cotent
+                .my_photo
+                .my_name_moment  
+                  p.my_name #{moment.name}
+                  p.my_moment 在<a href="#{moment.taskurl}">#{moment.taskcreater}</a>任务中添加了任务: #{moment.taskname}
+                .zan_comment_icon
+                  .zan_icon
+                  .comment_icon
+              .project_comment_border
+                .project_comment_box_btn_border
+                  .project_commentbox
+                    input(type="text",placeholder="请输入您的评论")
+                  input.project_commentbtn(type="button")
+                .project_comment_list
+                  //评论
+                  if(moment.comments)
+                    each comment in moment.comments
+                      .project_comment
+                        .comment_top
+                          p.comment_photo
+                          p.comment_name #{comment.commenter}
+                          p.from_prj #{comment.project}
+                        .comment_content #{comment.content}
+                        .conment_bottom
+                          p.comment_time #{comment.time}
+                          p.replyicon
+                          p.reply 回复
+                .moment_photo
+        else
+          p 没有新动态
+      //项目
+      #project_list_border
+        if(projects.length > 0)
+          for pro in projects
+            .project(data-pnumber="#{pro.pnumber}")
+              .project_information
+                .project_title_sprint
+                  p.title #{pro.title}
+                  p.sprinttime #{pro.starttime} - #{pro.endtime}
+                p.project_introduce #{pro.intro}
+                .time_commentCount
+                  p.time #{pro.time}
+                  p.commenticon
+                  p.message #{pro.msgcount}
+                .project_sprint_toScrum_commenticon
+                  p.sprint 当前第<span>#{pro.curcicle}</span>周期 第<span>#{pro.curday}</span>天 
+                  p.toScrum 
+                    a(href="#{pro.scrumurl}") 查看任务展板 
+                  .pre_ommenticon_border
+                    div
+                    p 评论
+                .project_gruop
+                  .photo
+                  .photo
+                  .photo.currentuser
+                  .photo
+              .project_comment_border
+                .project_comment_box_btn_border
+                  .project_commentbox
+                    input(type="text",placeholder="请输入您的评论")
+                  input.project_commentbtn(type="button")
+                .project_comment_list
+                  if(pro.comments)
+                    each comment in pro.comments
+                      .project_comment
+                        .comment_top
+                          p.comment_photo
+                          p.comment_name #{comment.evaluatorname}
+                          p.from_prj #{comment.projectname}
+                        .comment_content #{comment.content}
+                        .conment_bottom
+                          p.comment_time #{comment.date.getFullYear()}/#{comment.date.getMonth()+1}/#{comment.date.getDate()}
+                          p.replyicon
+                          p.reply 回复
+        else
+          p 你还没有参与任何项目哟！
+      //任务
+      #task_border
+      //文章
+      #article_border
+    
+    //头部搜索框
+
+    //头部私信列表1
+    include includes/header2
+
+    //联系人列表
+    include  includes/contactlist
+
+    //尾部
+    div#footer
+    
+    script(type='text/javascript', src='/javascripts/public.js')
+    script(type='text/javascript', src='/javascripts/Homepage1.js')

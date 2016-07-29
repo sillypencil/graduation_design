@@ -1,0 +1,32 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title= title
+		block link
+			link(rel='stylesheet', href='/stylesheets/index.css')
+	body
+		header#header
+			.center
+				h1.logo
+				nav.link
+					h2.none 网站导航
+					ul
+						li.active
+							a(href='###') 首页
+						li
+							a(href='###') 项目
+						li
+							a(href='###') 任务
+						li
+							a(href='###') 搜索
+						li
+							a(href='###') 教学任务
+			.remind
+				p
+					| 您好, 
+					a(href='/users/#{userId}') #{username}
+				div
+					a(href='/inform/#{userId}')
+						img(src='/images/展板/通知（有通知时）.png', alt='remind pic')
+	block content

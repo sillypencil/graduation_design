@@ -1,0 +1,80 @@
+extends layout
+
+block content
+  #title
+    p.word #{project.projectName}
+    .circle #{project.startTime}-#{project.endTime}
+    .sprint Sprint #{project.curSprint}, Day #{project.curDay}
+    div#group_info_icon
+    div#ranjintu_icon
+    div#group_info
+        div#group_info_content
+          div#content1
+            p.title 小组成员
+            div.photo
+
+          div#content2 项目简介<br/><span>#{project.intro}</span>
+          div#content3
+            p.title #{project.menager}
+            div.photo
+  //燃尽图
+  div#ranjintu
+    div.ranjintu_box
+      div#ranjintu_pic
+      div#ranjintu_hidebtn
+  #scrum
+    div.boardbg#requirement 
+      div.boardbg-header
+        img.addnotelisticonZ(src='../public/images/展板/添加Z.png', alt='添加')
+        h1.boardbg-header-title 用户需求
+        img.addnotelisticonY(src='../public/images/展板/添加Y.png', alt='添加')
+      div.boardbg-body
+        ul
+          if(project.requirement && project.requirement.length > 0)
+            each value in project.requirement
+              li.board
+                p.title(contenteditable="false") #{value.a}
+                p.content(contenteditable="false") #{value.a}
+                p.modify 修改便签
+                p.modifydone 完成
+              img.addnoteicon(src='../public/images/展板/添加.png', alt='添加')
+          //- else
+            li.board
+              p.title 
+                textarea(placeholder="添加标题")
+              p.content
+                textarea(placeholder="添加需求")
+            li.none.addbutton
+              img(src="/images/展板/添加.png")
+    if(project.scrum)
+      each value in project.scrum
+        div(class='boardbg', id='#{value}')
+          div.boardbg-header
+          img.addnotelisticonZ(src='../public/images/展板/添加Z.png', alt='添加')
+          h1.boardbg-header-title #{value.name}
+          img.addnotelisticonY(src='../public/images/展板/添加Y.png', alt='添加')
+          div.boardbg-body
+          ul
+            if(value.arr.length > 0)
+              each part in value.arr
+                li.board
+                  div
+                    p.title(contenteditable="false") #{part.title}
+                    p.content(contenteditable="false") #{part.content}
+                    p.modify 修改便签
+                    p.modifydone 完成
+                     img.addnoteicon(src='../public/images/展板/添加.png', alt='添加')
+            else
+              li.board
+                div
+                  p.title
+                    textarea(placeholder="")
+                  p.content
+                    textarea(placeholder="TEST") 
+              li.none.addbutton
+                img(src="/images/展板/添加.png")
+  #contact
+    img#contactButton(src="/images/展板/联系人.png",alt="")
+  footer#footer
+  script(type="text/javascript", src="/javascripts/home.js")
+  script(type="text/javascript", src="/javascripts/index.js")

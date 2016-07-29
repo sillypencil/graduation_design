@@ -1,0 +1,58 @@
+// 右侧项目成员&好友列表_图标
+#contactsicon
+
+
+// 右侧项目成员&好友列表_收起按钮
+#hidecontactsicon
+
+//右侧项目成员&好友列表1
+#contactslist1
+  #top1
+    #pro1
+      img(src="/images/3-30/联系人项目成员-橙.png" alt="pro")
+      p 该项目成员
+    #fri1
+  #search1
+    input#inpname1(type="text" placeholder="请输入姓名")
+    input#inpbtn1(type="submit" value="")
+  #messagelist1 
+    if(contacts&&contacts.length > 0)
+      each contact in contacts
+         p.list1
+          a(href="#{contact.url}")
+          span.para11 #{contact.name}<br /><span>a任务进行中</span>
+          span.para12
+    else
+      p.line 没有队友
+
+//右侧项目成员&好友列表2
+#contactslist2
+  #top2
+    #pro2
+    #fri2
+      img(src="/images/3-30/联系人我的好友.png" alt="pro")
+      p 我的好友
+  #search2
+    input#inpname2(type="text" placeholder="请输入姓名")
+    input#inpbtn2(type="submit" value="")
+  #messagelist2
+    if(recentcontacts && recentcontacts.length>0)
+      p.line 最近联系人
+        span
+        each recentcontact in recentcontacts
+          p.list2
+            a(href="#{recentcontact.url}")
+              span.para21 #{recentcontact.name}<br /><span>a任务进行中</span>
+              span.para22
+    else
+      p.line 没有最近联系人
+    p.line 我的好友
+      span
+      if(friends && friends.length > 0)
+        each friend in friends
+          p.list2
+            a(href="#{friend.url}")
+              span.para21 #{friend.name}<br /><span>a任务进行中</span>
+              span.para22
+      else
+        p.line 好友列表空空如也

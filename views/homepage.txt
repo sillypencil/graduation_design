@@ -1,0 +1,41 @@
+username:用户名
+active_num: 动态数
+project_num： 项目数
+task_num： 任务数	
+article_num ：文章数
+user.job:职位
+user.sex：性别
+user.major：专业
+user.email
+moments:[{
+	name: "xujiaolong"
+	taskurl:url,
+	taskid: 1,
+	taskcreater: "a",
+	taskname: "a",
+	comments:[
+		{
+			project: "01",
+			commmenter: "a",
+			content: "aaa"
+		}
+	]
+}]
+
+projects:[{
+	title:"a",
+	starttime: "2001/1/1",
+	endtime: "2016/4/1",
+	intro: "introduction",
+	time:"2016/2/2",
+	msgcount: 10,
+	curcicle: 3,
+	curday: 2,
+	scrumurl: /scrum/2,
+	comments:[{
+		commenter: "commenter",
+		project: "projectname",
+		content: "content",
+		time: "2016/3/3"
+	}]
+}]

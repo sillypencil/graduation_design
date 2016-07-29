@@ -1,0 +1,627 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+	font-family:Arial,"微软雅黑";
+}
+body{
+	background: #f9f9f9;
+}
+.none{
+	display:none;
+}
+a{
+	text-decoration:none;
+}
+input{
+	border: none;
+}
+
+
+/*网页头部*/
+#sep_box{
+	width:1024px;
+	height:76px;
+	margin:0 auto;
+}
+#header_border{
+	width:100%;
+	height:76px;
+	position:fixed;
+	top:0;
+	left:0;
+	/*background:#f9f9f9;*/
+	/*box-shadow:3px 3px 3px  #f9f9f9;*/
+	/*border:10px solid red;*/
+}
+#header{
+	width:1024px;
+	height:76px;
+	margin:0 auto;
+	/*border:1px solid blue;*/
+}
+#header #logo_border{
+	float:left;
+	width:76px;
+	height:76px;
+	/*box-shadow:3px 3px 3px gray;*/
+	/*border:1px solid blue;*/
+}
+#header #prehide{
+	float:left;
+	/*1024 - 76 = 948*/
+	width:948px;
+	height:76px;
+	background:rgb(33,34,34);
+	color:#fff;
+	/*box-shadow:3px 3px 3px gray;*/
+	/*border:1px solid blue;*/	
+}
+#header #logo{
+	float:left;
+	width:76px;
+	height:76px;
+	background:url("../images/4-10/LOGO.jpg") center no-repeat;
+	/*border:1px solid #fff;*/
+}
+#header #logo a{
+	display: block;
+	width:76px;
+	height:76px;
+}
+#header #link{
+	float:left;
+}
+#header #link ul{
+	list-style: outside none none;
+}
+#header #link ul li{
+	float:left;
+	width:120px;
+	height:76px;
+	line-height:76px;
+}
+#header #link ul li a{
+	display: block;
+	text-decoration: none;
+	color:#fff;
+	text-align: center;
+	/*border: 1px solid white;*/
+}
+
+#header #link ul li a:hover,
+#header #link ul li.active{
+	background: #111;
+}
+
+#header #remind_search{
+	float:left;
+	height:76px;
+	line-height: 76px;
+	margin-left:362px;
+	/*border: 1px solid white;*/
+}
+#header_remindword{
+	float:left;
+}
+#header_remindword a{
+	text-decoration:none;
+	color:#fff;
+}
+#header_remindicon{
+	float:left;
+	width:28px;
+	height:18px;
+	background: url(../images/展板/通知（有通知时）.png) center no-repeat;
+	margin-top: 29px;
+	margin-left: 18px;
+	/*border: 1px solid white;*/
+}
+#header_searchicon{
+	float:left;
+	width: 22px;
+	height: 22px;
+	background: url(../images/header_searchicon.jpg) center no-repeat;
+	margin-top:28px;
+	margin-left:18px;
+	/*border: 1px solid white;*/
+}
+
+
+
+
+/*头部搜索框*/
+#header_searchbox{
+	width:200px;
+	height:70px;
+	background: url(../images/3-30/搜索-背景.png) center no-repeat;
+	position: fixed;
+	/*position: absolute;*/
+	top:60px;
+	border-radius:5px;
+	display:none;
+	/*border:1px solid red;*/
+}
+#header_searchbox div.shadowbox{
+	height:60px;
+	margin-top:10px;
+	/*border: 1px solid blue;*/
+}
+#header_searchbox #box{
+	width:130px;
+	height:40px;
+	line-height: 40px;
+	margin:10px 10px 10px 10px;
+	border:1px solid rgb(153.153.153);
+	border-radius: 4px;
+	float:left;
+	text-align:center;
+	font-size:15px;
+	/*border: 1px solid red;*/
+}
+#header_searchbox #btn{
+	width:40px;
+	height:40px;
+	margin-top:10px;
+	border-radius: 4px;
+	float:left;
+	background: url(../images/3-30/搜索-搜索橙色.png);
+}
+
+/*头部私信列表1*/
+#header_remindlist1{
+	width:200px;
+	height: 310px;
+	background: url(../images/3-30/通知-背景.png) center no-repeat;
+	position: fixed;
+	/*position: absolute;*/
+	top: 60px;
+	border-radius:5px;
+	display: none;
+	/*border:1px solid blue;*/
+}
+#header_remindlist1 div.shadowbox{
+	height:300px;
+	margin-top:10px;
+	/*border-radius:5px;*/
+	/*border:1px solid red;*/
+	/*box-shadow: 3px 3px 3px #222;*/
+}
+#header_remindlist1 #top1{
+	float: left;
+	height:38px;
+	max-height: 38px;
+	width:200px;
+	max-width: 200px;
+	/*margin-top: 10px;*/
+	/*border:1px solid red;*/
+}
+#header_remindlist1 #top1 #top_pro1{
+	width: 98px;
+	height: 38px;
+	float:left;
+	background: url(../images/3-30/通知-系统通知橙色.png) center no-repeat;
+	border: 1px solid rgba(153,153,153,0.5);
+	border-top: none;
+	border-radius: 2px;
+}
+#header_remindlist1 #top1 #top_cont1{
+	width: 98px;
+	height: 38px;
+	float:left;
+	background: url(../images/3-30/通知-好友通知灰色.png) center no-repeat;
+	border: 1px solid rgba(153,153,153,0.5);
+	border-top: none;
+	border-radius: 2px;
+}
+#header_remindlist1 #message1{
+	float: left;
+	height: 200px;
+	max-height: 200px;
+	width:200px;
+	max-width: 200px;
+	margin-top: 10px;
+	/*border: 1px solid blue;*/
+	/*border-bottom: 1px solid rgb(153,153,153);*/
+}
+#header_remindlist1 #message1 p{
+	padding: 10px;
+	height: 50px;
+	color:black;
+	font-size: 10px;
+	/*border:1px solid red;*/
+	border-bottom: 1px solid rgb(240,240,240);
+}
+#header_remindlist1 #message1 p span{
+	color:rgb(153,153,153);
+}
+#header_remindlist1 #bottom1{
+	float: left;
+	height:38px;
+	max-height: 38px;
+	width:200px;
+	max-width: 200px;
+	margin-top: 16px;
+	/*border:1px solid blue;*/
+	line-height: 38px;
+}
+#header_remindlist1 #bottom1 #setting1{
+	float:left;
+	width: 16px;
+	background: url(../images/3-30/通知-设置.png) center no-repeat;
+	/*border: 1px solid blue;*/
+	height:38px;
+	margin-left: 15px;
+	margin-right: 88px;
+}
+#header_remindlist1 #bottom1 p{
+	float:left;
+	font-size: 10px;
+	color:rgb(153,153,153);
+	/*border: 1px solid blue;*/
+
+}
+#header_remindlist1 #bottom1 #a1{
+	float: left;
+	width: 13px;
+	height: 11px;
+	background: url(../images/3-30/通知-查看全部.png) center no-repeat;
+	/*border: 1px solid blue;*/
+	height:38px;
+	margin-left: 3px;
+}
+
+/*头部私信列表2*/
+#header_remindlist2{
+	width:200px;
+	height: 310px;
+	background: url(../images/3-30/通知-背景.png) center no-repeat;
+	position: fixed;
+	/*position: absolute;*/
+	top: 60px;
+	border-radius: 5px;
+	display: none;
+}
+#header_remindlist2 div.shadowbox{
+	height:300px;
+	margin-top:10px;
+	/*box-shadow: 3px 3px 3px #222;*/
+}
+#header_remindlist2 #top2{
+	float: left;
+	height:38px;
+	max-height: 38px;
+	width:200px;
+	max-width: 200px;
+	/*margin-top: 10px;*/
+	/*box-shadow: -3px 3px 3px gray;*/
+	/*border:1px solid red;*/
+}
+#header_remindlist2 #top2 #top_pro2{
+	width: 98px;
+	height: 38px;
+	float:left;
+	background: url(../images/3-30/通知-系统通知灰色.png) center no-repeat;
+	border: 1px solid rgb(153,153,153);
+	border-top: none;
+	border-radius: 2px;
+}
+#header_remindlist2 #top2 #top_cont2{
+	width: 98px;
+	height: 38px;
+	float:left;
+	background: url(../images/3-30/通知-好友通知橙色.png) center no-repeat;
+	border: 1px solid rgb(153,153,153);
+	border-top: none;
+	border-radius: 2px;
+}
+#header_remindlist2 #message2{
+	float: left;
+	height: 200px;
+	max-height: 200px;
+	width:200px;
+	max-width: 200px;
+	margin-top: 10px;
+	/*border: 1px solid blue;*/
+}
+#header_remindlist2 #message2 p{
+	margin: 10px;
+	height: 50px;
+	color:rgb(153,153,153);
+	font-size: 10px;
+	/*border:1px solid red;*/
+}
+#header_remindlist2 #bottom2{
+	float: left;
+	height:38px;
+	max-height: 38px;
+	width:200px;
+	max-width: 200px;
+	margin-top: 16px;
+	/*border:1px solid blue;*/
+	line-height: 38px;
+}
+#header_remindlist2 #bottom2 #setting2{
+	float:left;
+	width: 16px;
+	background: url(../images/3-30/通知-设置.png) center no-repeat;
+	/*border: 1px solid blue;*/
+	height:38px;
+	margin-left: 15px;
+	margin-right: 88px;
+}
+#header_remindlist2 #bottom2 p{
+	float:left;
+	font-size: 10px;
+	color:rgb(153,153,153);
+	/*border: 1px solid blue;*/
+
+}
+#header_remindlist2 #bottom2 #a2{
+	float: left;
+	width: 13px;
+	height: 11px;
+	background: url(../images/3-30/通知-查看全部.png) center no-repeat;
+	/*border: 1px solid blue;*/
+	height:38px;
+	margin-left: 3px;
+}
+
+/*项目&好友列表图标*/
+#contactsicon{
+	width:60px;
+	height:60px;
+	background:url(../images/4-10/联系人X.png) center no-repeat;
+	position: fixed;
+	/*position:absolute;*/
+	bottom:0;
+	right:0;
+	/*border:1px solid blue;*/
+}
+#hidecontactsicon{
+	background:url(../images/4-10/联系人Y.png) center no-repeat;
+	width:60px;
+	height:60px;
+	/*border: 10px solid blue;*/
+	position: fixed;
+	bottom:0;
+	right: 300px;
+	/*box-shadow: -3px 3px 3px gray;*/
+	display: none;
+	border-radius: 4px;
+}
+
+/*项目&好友列表1*/
+#contactslist1{
+	/*border: 1px solid blue;*/
+	/*box-shadow: -3px 3px 3px #222;*/
+	/*position: absolute;*/
+	position:fixed;
+	/*bottom: 0;*/
+	top:0;
+	right:0;
+	width: 300px;
+	height: 768px;
+	background: rgb(240,240,240);
+	display: none;
+}
+#contactslist1 #top1{
+	/*border: 1px solid blue;*/
+	width:300px;
+	height: 78px;
+	/*box-shadow: -3px 3px 3px gray,
+	             3px 3px 3px gray;*/
+}
+#contactslist1 #top1 #pro1{
+	/*border: 1px solid blue;*/
+	float: left;
+	width:200px;
+	height: 78px;
+	line-height: 80px;
+	background: rgb(243,156,18);
+}
+#contactslist1 #top1 #pro1 img{
+	/*border: 1px solid blue;*/
+	float: left;
+	margin:30px 18px auto 35px;
+}
+#contactslist1 #top1 #pro1 p{
+	/*border: 1px solid blue;*/
+	float: left;
+	color:white;
+}
+#contactslist1 #top1 #fri1{
+	/*border: 1px solid blue;*/
+	float: left;
+	width:100px;
+	height: 78px;
+	background: url(../images/3-30/联系人我的好友.png) center no-repeat;
+	background-color: #222;
+}
+
+#contactslist1 #search1{
+	/*border: 1px solid blue;*/
+	height: 40px;
+	width: 300px;
+	background: url(../images/3-30/联系人搜索框.png) center no-repeat;
+	margin:22px auto 22px auto;
+}
+#contactslist1 #search1 #inpname1{
+	/*border: 1px solid blue;*/
+	border:none;
+	width:178px;
+	height:34px;
+	float:left;
+	margin:3px 0 1px 50px;
+}
+#contactslist1 #search1 #inpbtn1{
+	/*border: 1px solid blue;*/
+	background: url(../images/3-30/联系人搜索.png) center no-repeat;
+	width: 22px;
+	height: 22px;
+	float:right;
+	margin-right: 50px;
+	margin-top: 9px;
+	border:none;
+}
+
+#contactslist1 #messagelist1{
+	/*border: 1px solid blue;*/
+}
+#contactslist1 #messagelist1 .list1{
+	/*border:1px solid red;*/
+	background:url(../images/3-30/联系人标签.png) center no-repeat;
+	margin:0 auto 16px auto;
+	width: 240px;
+	height:80px;
+}
+#contactslist1 #messagelist1 .list1 .para11{
+	/*border:1px solid blue;*/
+	float: left;
+	display: inline-block;
+	width:80px;
+	height:60px;
+	margin-left:88px;
+	color:white;
+	padding:20px 0 0 0;
+}
+#contactslist1 #messagelist1 .list1 .para11 span{
+	font-size: 8px;
+	color:gray;
+	/*border:1px solid blue;*/
+}
+#contactslist1 #messagelist1 .list1 .para12{
+	/*border:1px solid red;*/
+	float: right;
+	display: inline-block;
+	width:66px;
+	height:80px;
+	background:url(../images/3-30/联系人聊天.png);
+}
+
+/*项目&好友列表2*/
+#contactslist2{
+	/*border: 1px solid blue;*/
+	/*box-shadow: -3px 3px 3px #222;*/
+	/*position: absolute;*/
+	position:fixed;
+	/*bottom: 0;*/
+	top:0;
+	right:0;
+	width: 300px;
+	height: 768px;
+	background: rgb(240,240,240);
+	display: none;
+}
+#contactslist2 #top2{
+	/*border: 1px solid blue;*/
+	width:300px;
+	height: 78px;
+	/*box-shadow: -3px 3px 3px gray,
+	             3px 3px 3px gray;*/
+}
+#contactslist2 #top2 #pro2{
+	/*border: 1px solid blue;*/
+	float: left;
+	width:100px;
+	height: 78px;
+	background: url(../images/3-30/联系人项目成员-黑.png) center no-repeat;
+	background-color: #222;
+	
+}
+#contactslist2 #top2 #fri2{
+	/*border: 1px solid blue;*/
+	float: left;
+	width:200px;
+	height: 78px;
+	line-height: 80px;
+	background: rgb(243,156,18);
+}
+#contactslist2 #top2 #fri2 img{
+	/*border: 1px solid blue;*/
+	float: left;
+	margin:30px 20px auto 40px;
+}
+#contactslist2 #top2 #fri2 p{
+	/*border: 1px solid blue;*/
+	float: left;
+	color:white;
+}
+#contactslist2 #search2{
+	/*border: 1px solid blue;*/
+	height: 40px;
+	width: 300px;
+	background: url(../images/3-30/联系人搜索框.png) center no-repeat;
+	margin:22px auto 22px auto;
+}
+#contactslist2 #search2 #inpname2{
+	/*border: 1px solid blue;*/
+	border:none;
+	width:178px;
+	height:34px;
+	float:left;
+	margin:3px 0 1px 50px;
+}
+#contactslist2 #search2 #inpbtn2{
+	/*border: 1px solid blue;*/
+	background: url(../images/3-30/联系人搜索.png) center no-repeat;
+	width: 22px;
+	height: 22px;
+	float:right;
+	margin-right: 50px;
+	margin-top: 9px;
+	border:none;
+}
+
+#contactslist2 #messagelist2{
+	/*border: 1px solid blue;*/
+}
+#contactslist2 #messagelist2 .list2{
+	/*border:1px solid red;*/
+	background:url(../images/3-30/联系人标签.png) center no-repeat;
+	margin:0 auto 16px auto;
+	width: 240px;
+	height:80px;
+}
+#contactslist2 #messagelist2 .list2 .para21{
+	/*border:1px solid blue;*/
+	float: left;
+	display: inline-block;
+	width:80px;
+	height:60px;
+	margin-left:88px;
+	color:white;
+	padding:20px 0 0 0;
+}
+#contactslist2 #messagelist2 .list2 .para21 span{
+	font-size: 8px;
+	color:gray;
+	/*border:1px solid blue;*/
+}
+#contactslist2 #messagelist2 .list2 .para22{
+	/*border:1px solid red;*/
+	float: right;
+	display: inline-block;
+	width:66px;
+	height:80px;
+	background:url(../images/3-30/联系人聊天.png);
+}
+
+#contactslist2 .line{
+	width: 240px;
+	height:21px;
+	/*border:1px solid blue;*/
+	margin:0 0 16px 30px;
+	color:gray;
+}
+#contactslist2 .line span{
+	display: inline-block;
+	width:130px;
+	height: 1px;
+	float: right;
+	border-bottom: 1px solid gray;
+	margin: 10px;
+	margin-right: 20px;
+}
+#footer{height:50px; width:100%;}

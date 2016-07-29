@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+	font-family:Arial;
+}
+body{
+	background: rgb(248,248,248);
+}
+h2.none{
+	display:none;
+}
+a{
+	text-decoration:none;
+	color:white;
+}
+#header{
+	width:1024px;
+	height:76px;
+	margin:0 auto;
+	background:rgb(33,34,34);
+}
+
+#header .center{
+	float:left;
+}
+#header .logo{
+	width:76px;
+	height:76px;
+	background-image:url("");
+	background:rgb(243,106,18);
+	float:left;
+}
+#header .center .link{
+	float:left;
+}
+#header .center .link ul{
+	list-style:outside none none;
+}
+#header .center .link ul li{
+	float:left;
+	width:120px;
+	line-height:76px;
+	color:white;
+}
+#header .center .link ul li a{
+	text-decoration: none;
+	color:white;
+	display: block;
+	text-align: center;
+}
+
+#header .center .link ul li a:hover,
+#header .center .link ul li.active{
+	background: #111;
+}
+
+#header .remind {
+	line-height: 76px;
+	float:right;
+}
+#header .remind p{
+	float:left;
+	color:white;
+	margin:0 20px;
+	/*border: 1px solid white;*/
+}
+#header .remind div{
+	float:left;
+	margin:0 60px 0 20px;
+	/*border: 1px solid white;*/
+}
+
+
+#title{
+	width:876px;
+	height:50px;
+	margin:24px auto 18px auto;
+	border:1px solid rgb(153,153,153);
+	line-height: 50px;
+}
+#title .word{
+	float:left;
+	color:black;
+	margin:0 10px 0 40px;
+	/*border:1px solid red;*/
+}
+#title .circle{
+	float:left;
+	color:black;
+	margin:0 10px;
+	/*border:1px solid red;*/
+}
+#title .sprint{
+	float:left;
+	color:rgb(153,153,153);
+	margin:0 10px;
+	/*border:1px solid red;*/
+}
+#title .project1{
+	float:left;
+	margin:0 5px;
+	/*border:1px solid red;*/
+}
+#title .project2{
+	float:left;
+	margin:0 5px;
+	/*border:1px solid red;*/
+}
+
+
+
+
+#mainbody{
+	margin:18px 0 0 235px;
+	/*border:1px solid blue;*/
+}
+#scrum{
+	float:left;
+	/*width:882px;*/
+	/*margin:0 auto;*/
+	/*border:1px dotted red;*/
+}
+#scrum ul{
+	list-style: outside none none;
+	float:left;
+}
+#scrum ul li.board{
+	border:1px solid rgb(153,153,153);
+	min-width:160px;
+	margin:18px 9px 0 9px;
+}
+
+/*????*/
+/*ul > li:first-child{
+	margin-top: 0;
+	background: red;
+}*/
+
+#scrum .title{
+	min-height:50px;
+	line-height: 50px;
+	text-align: center;
+	background: white;
+	/*border:1px solid blue;*/
+}
+#scrum .content{
+	min-height:170px;
+	text-align:center;
+	background: white;
+	/*border:1px solid red;*/
+}
+
+#scrum #requirement li.board{
+	width:160px;
+	margin-left: 0;
+}
+#scrum #requirement li.board .content{
+	min-height:130px;
+}
+#scrum #check li.board{
+	margin-right: 0;
+}
+
+#scrum li.addbutton{
+	width:40px;
+	height:20px;
+	margin:0 auto 18px auto;
+	/*border:1px solid blue;*/
+}
+
+
+#contact{
+	float:right;
+	margin:200px auto 0 auto;
+	/*border:1px solid blue;*/
+}
+
+
+
+#footer{
+	clear:both;
+	width:1024px;
+	height:80px;
+	margin:600px auto;
+	/*border: 1px solid gray;*/
+}
+
+.title textarea{
+	width:160px;
+	min-height:20px;
+	line-height: 20px;
+	text-align: center;
+}
+.content textarea{
+	width:160px;
+	min-height:170px;
+	text-align:center;
+}
+#requirement .content textarea{
+	min-height:130px;
+}
+textarea{
+	border:none;
+}
